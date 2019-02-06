@@ -41,6 +41,7 @@ const cleanup = (spy, callback) => {
 
 // Default message fields
 const DEFAULT_ISMASTER = {
+  __nodejs_mock_server__: true,
   ismaster: true,
   maxBsonObjectSize: 16777216,
   maxMessageSizeBytes: 48000000,
