@@ -66,6 +66,23 @@ module.exports = {
     host = host || 'localhost';
     options = options || {};
 
+    if (process.env.MONGODB_SERVER_PEM || process.env.MONGODB_CA_PEM) {
+      if (process.env.MONGODB_SERVER_PEM == null) {
+        throw new Error('MONGODB_SERVER_PEM must be provided for TLS support');
+      }
+
+      if (process.env.MONGODB_CA_PEM == null) {
+        throw new Error('MONGODB_CA_PEM must be provided for TLS support');
+      }
+
+      Object.assign(options, {
+        tls: true,
+        ca: fs.readFileSync(process.env.MONGODB_CA_PEM),
+        cert: fs.readFileSync(process.env.MONGODB_SERVER_PEM),
+        key: fs.readFileSync(process.env.MONGODB_SERVER_PEM)
+      });
+    }
+
     let mockServer = new MockServer(port, host, options);
     mockServers.push(mockServer);
     return mockServer.start();
