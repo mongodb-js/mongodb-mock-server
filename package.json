@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/mongodb-js/mongodb-mock-server#readme",
   "dependencies": {
+    "bson": "^4.0.3",
     "snappy": "^6.0.1"
   },
   "devDependencies": {
