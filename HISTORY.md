@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/mongodb-js/mongodb-mock-server/compare/v1.1.0...v2.0.0) (2020-03-13)
+
+
+### Bug Fixes
+
+* remove unused bson import ([955cd4e](https://github.com/mongodb-js/mongodb-mock-server/commit/955cd4e))
+
+
+### Features
+
+* update BSON dependency to v4.0.3 ([d756b10](https://github.com/mongodb-js/mongodb-mock-server/commit/d756b10))
+
+
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/mongodb-js/mongodb-mock-server/compare/v1.0.1...v1.1.0) (2020-01-09)
 
